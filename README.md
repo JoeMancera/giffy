@@ -22,5 +22,6 @@
 - [Reglas de linting para StandardJS](https://standardjs.com/rules.html)
 - [Giphy developers](https://developers.giphy.com/docs/sdk)
 - [Wouter, paquete más lite vs React router](https://github.com/molefrog/wouter)
+- [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
