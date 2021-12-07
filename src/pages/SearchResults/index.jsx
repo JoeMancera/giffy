@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ListOfGifs from "../../components/ListOfGifs";
 import Spinner from "../../components/Spinner";
-import getGifs from "../../services/getGifs";
+import { useGifs } from "../../hooks/useGifs";
 import "./SearchResult.css";
 
 export default function SearchResult({ params }) {
   const { keyword } = params;
-  const [gifs, setGifs] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    getGifs({ keyword }).then((gifs) => {
-      setGifs(gifs);
-      setLoading(false);
-    });
-  }, [keyword]);
-  // se agrega el keyword porque es una dependencia del efecto
+  const { loading, gifs } = useGifs({ keyword });
 
   return (
     <div className="App-gifs">
