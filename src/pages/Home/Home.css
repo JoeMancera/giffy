@@ -1,0 +1,16 @@
+ul {
+  margin: 0;
+  padding: 0;
+  align-self: start;
+}
+ul li {
+  list-style: none;
+  font-size: 12px;
+}
+
+.App-title {
+  text-align: center;
+  font-size: 0.5em;
+  margin: 0;
+  align-self: start;
+}
