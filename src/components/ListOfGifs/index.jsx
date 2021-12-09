@@ -3,7 +3,11 @@ import Gif from "../Gif";
 import "./ListOfGif.css";
 
 export default function ListOfGifs({ gifs }) {
-  return gifs.map((giftElement) => (
-    <Gif gifInfo={giftElement} key={giftElement.id} />
-  ));
+  return (
+    <div className="ListOfGifs">
+      {gifs.map((giftElement) => (
+        <Gif gifInfo={giftElement} key={giftElement.id} />
+      ))}
+    </div>
+  );
 }

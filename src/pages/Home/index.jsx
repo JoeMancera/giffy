@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import ListOfGifs from "../../components/ListOfGifs";
-import Spinner from "../../components/Spinner";
+import ListOfGifs from "components/ListOfGifs";
+import Spinner from "components/Spinner";
+import TrendingSearches from "components/TrendingSearches";
 import { Link, useLocation } from "wouter";
-import { useGifs } from "../../hooks/useGifs";
-
+import { useGifs } from "hooks/useGifs";
 import "./Home.css";
-
-const POPULAR_GIFS = ["matrix", "starwars", "spiderman", "pokemon"];
 
 export default function Home() {
   const [keyword, setKeyword] = useState("");
@@ -37,13 +35,9 @@ export default function Home() {
       <div className="App-gifs">
         {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
       </div>
-      <h3 className="App-title">Los gifs más top</h3>
+      <h3 className="App-title">Tendencias</h3>
       <ul>
-        {POPULAR_GIFS.map((gif) => (
-          <li key={gif}>
-            <Link to={`/search/${gif}`}>{gif}</Link>
-          </li>
-        ))}
+        <TrendingSearches />
       </ul>
     </>
   );
