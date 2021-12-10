@@ -25,6 +25,7 @@
 - [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
 - [Placeholders components para el fallback de un componente](https://skeletonreact.com/)
 - [React SVG placeholders](https://www.google.com/search?q=react+sgv+placeholders&oq=react+sgv+placeholders&aqs=chrome..69i57.6024j0j1&sourceid=chrome&ie=UTF-8)
+- [Just-debounce-it - para evitar multiples ejecuciones de una función](https://github.com/angus-c/just#just-debounce-it)
 - 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
