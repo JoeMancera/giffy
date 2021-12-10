@@ -6,7 +6,11 @@ import "./SearchResult.css";
 
 export default function SearchResult({ params }) {
   const { keyword } = params;
-  const { loading, gifs } = useGifs({ keyword });
+  const { loading, gifs, setPage } = useGifs({ keyword });
+
+  const handleOnNextPage = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <>
@@ -14,6 +18,7 @@ export default function SearchResult({ params }) {
       <div className="App-gifs">
         {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
       </div>
+      <button onClick={handleOnNextPage}>Next Page</button>
     </>
   );
 }
