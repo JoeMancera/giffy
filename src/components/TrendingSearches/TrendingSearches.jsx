@@ -8,5 +8,6 @@ export default function TrendingSearches() {
   useEffect(() => {
     getTrendingTerms().then(setTrends);
   }, []);
+
   return <Category listOfItems={trends} />;
 }

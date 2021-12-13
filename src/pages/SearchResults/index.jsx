@@ -18,7 +18,7 @@ export default function SearchResult({ params }) {
   // El useCallback espera una función por lo que no hace falta hacer una arrow function, ya que el debounce devuelve una
   const debounceHandleNextPage = useCallback(
     debounce(() => setPage((prevPage) => prevPage + 1), 500),
-    []
+    [setPage]
   );
 
   useEffect(() => {

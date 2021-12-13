@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ListOfGifs from "components/ListOfGifs";
 import Spinner from "components/Spinner";
 import TrendingSearches from "components/TrendingSearches";
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { useGifs } from "hooks/useGifs";
 import "./Home.css";
 
