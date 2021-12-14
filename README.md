@@ -28,5 +28,7 @@
 - [Just-debounce-it - para evitar multiples ejecuciones de una función](https://github.com/angus-c/just#just-debounce-it)
 - [About queries | Testing library](https://testing-library.com/docs/queries/about)
 - [Firing events | Testing library](https://testing-library.com/docs/dom-testing-library/api-events)
+- [useCallback | React](https://reactjs.org/docs/hooks-reference.html#usecallback)
+- [React.memo  | A higher-order component](https://reactjs.org/docs/react-api.html#reactmemo)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
