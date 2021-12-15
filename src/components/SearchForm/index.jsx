@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchForm.css";
 
 function SearchForm({ onSubmit }) {
   const [keyword, setKeyword] = useState("");
@@ -16,6 +17,7 @@ function SearchForm({ onSubmit }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="form-control"
         type="text"
         value={keyword}
         onChange={handleInput}

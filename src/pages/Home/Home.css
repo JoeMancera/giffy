@@ -1,11 +1,10 @@
-ul {
-  margin: 0;
-  padding: 0;
-  align-self: start;
-}
-ul li {
-  list-style: none;
-  font-size: 12px;
+.App-content {
+  min-height: 100vh;
+  display: flex;
+  gap: 4em;
+  font-size: 18px;
+  color: white;
+  padding: 16px;
 }
 
 .App-title {
@@ -13,4 +12,15 @@ ul li {
   font-size: 0.5em;
   margin: 0;
   align-self: start;
+}
+
+.App-section {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .App-content {
+    flex-direction: column;
+    gap: 1em;
+  }
 }

@@ -1,0 +1,10 @@
+.trending-item {
+  list-style: none;
+  font-size: 18px;
+  padding: 5px 12px;
+  text-transform: capitalize;
+}
+
+.trending-item:hover a{
+  background-color: black;
+}
