@@ -1,20 +1,16 @@
-button {
-  font-size: 42px;
-}
-
 a {
   color: #61dafb;
   text-decoration: none;
 }
 
 .App-content {
-  background-color: #282c34;
+  background-color: #0b025f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 18px;
   color: white;
   padding: 16px;
 }

@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import StaticContext from './context/StaticContext'
 import { GifsContextProvider } from './context/GifsContext'
 import './App.css';
+import Logo from "assets/logo.svg";
 
 function App() {
 
@@ -16,7 +17,11 @@ function App() {
     }}>
       <div className="App">
         <section className="App-content">
-          <h1><Link to='/'>Gifs</Link></h1>
+          <h1>
+            <Link to='/'>
+              &nbsp;<img width="100px" className='logo' src={Logo} alt="Gifs App" />
+            </Link>
+          </h1>
           <GifsContextProvider>
             <Route path='/' component={Home} />
             <Route path="/search/:keyword" component={SearchResults} />
