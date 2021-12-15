@@ -4,16 +4,23 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  width: 100%;
+  border-radius: 12px;
+  max-width: 300px;
+  height: fit-content;
+  -webkit-box-shadow: 0px 0px 10px -2px #ccc; 
+  box-shadow: 0px 0px 10px -2px #ccc;
 }
 
 .Gif figcaption{
   margin: 0;
-  font-size: 2px;
+  padding: 0 8px;
+  font-size: 8px;
   position: absolute;
   background: rgba(0, 0, 0, 0.849);
+  border-radius: 12px 0 0 0 ;
 }
 .Gif img {
   object-fit: contain;
+  border-radius: 12px;
 }
 

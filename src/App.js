@@ -16,7 +16,7 @@ function App() {
       working: false,
     }}>
       <div className="App">
-        <section className="App-content">
+        <section className="App">
           <h1>
             <Link to='/'>
               &nbsp;<img width="100px" className='logo' src={Logo} alt="Gifs App" />

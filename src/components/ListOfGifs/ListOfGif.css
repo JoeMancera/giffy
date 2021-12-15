@@ -1,8 +1,16 @@
 .ListOfGifs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
   align-items: center;
   gap: 16px;
-  width: 100%;
+  width: 60vw;
   grid-template-rows: masonry;
 }
+
+@media screen and (max-width: 768px) {
+  .ListOfGifs {
+    width: 100vw;
+  }
+}
+  

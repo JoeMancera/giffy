@@ -25,13 +25,15 @@ export default function Home() {
     <>
       <SearchForm onSubmit={handleSubmit} />
       <h3>Última busqueda</h3>
-      <div className="App-gifs">
-        {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
+      <div className="App-content ">
+        <section className="App-gifs">
+          {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
+        </section>
+        <aside className="App-trends">
+          <h3 className="App-section">Tendencias</h3>
+          <TrendingSearches />
+        </aside>
       </div>
-      <h3 className="App-title">Tendencias</h3>
-      <ul>
-        <TrendingSearches />
-      </ul>
     </>
   );
 }
