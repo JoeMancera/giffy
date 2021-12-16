@@ -30,5 +30,6 @@
 - [Firing events | Testing library](https://testing-library.com/docs/dom-testing-library/api-events)
 - [useCallback | React](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [React.memo  | A higher-order component](https://reactjs.org/docs/react-api.html#reactmemo)
+- [Wouter | <Redirect />](https://github.com/molefrog/wouter#redirect-topath-)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
