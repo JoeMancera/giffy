@@ -5,11 +5,15 @@ import { useGifs } from "hooks/useGifs";
 import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
 import "./SearchResult.css";
+import useSEO from "hooks/useSEO";
 
 export default function SearchResult({ params }) {
   const { keyword } = params;
   const { loading, gifs, setPage } = useGifs({ keyword });
   const { isNearScreen, fromRef } = useNearScreen({ once: false });
+
+  const title = gifs ? `${gifs.length} resultados de ${keyword}` : "";
+  useSEO({ title });
   // const handleOnNextPage = () => {
   //   setPage((prevPage) => prevPage + 1);
   // };

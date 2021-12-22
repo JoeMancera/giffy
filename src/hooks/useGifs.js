@@ -19,6 +19,7 @@ export function useGifs({ keyword } = { keyword : null}) {
       setGifs(gifs);
       setLoading(false);
       localStorage.setItem('lastKeyword', keyword);
+      console.log('useGifs', gifs);
     });
 
   }, [keyword, keywordToUse, setGifs]);
