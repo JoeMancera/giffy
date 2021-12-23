@@ -1,21 +1,32 @@
 import React, { useState } from "react";
+import { useLocation } from "wouter";
 import "./SearchForm.css";
 
-function SearchForm({ onSubmit }) {
+const RATINGS = ["g", "pg", "pg-13", "r", "nc-17"];
+
+function SearchForm() {
   const [keyword, setKeyword] = useState("");
+  const [path, pushLocation] = useLocation();
+  const [rating, setRating] = useState(RATINGS[0]);
 
   const handleSubmit = (event) => {
     // navegamos
     event.preventDefault();
-    onSubmit({ keyword });
+    // navegamos
+    pushLocation(`/search/${keyword}/${rating}`);
   };
 
   const handleInput = (event) => {
     setKeyword(event.target.value);
   };
 
+  const handleRating = (event) => {
+    setRating(event.target.value);
+  };
+
   return (
     <form onSubmit={handleSubmit}>
+      <button>Buscar</button>
       <input
         className="form-control"
         type="text"
@@ -23,6 +34,14 @@ function SearchForm({ onSubmit }) {
         onChange={handleInput}
         placeholder="Search a gif here..."
       />
+      <select value={rating} onChange={handleRating}>
+        <option disabled>Select a rating...</option>
+        {RATINGS.map((rating) => (
+          <option key={rating} value={rating}>
+            {rating}
+          </option>
+        ))}
+      </select>
     </form>
   );
 }
