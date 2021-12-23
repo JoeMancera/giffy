@@ -4,10 +4,10 @@ import "./SearchForm.css";
 
 const RATINGS = ["g", "pg", "pg-13", "r", "nc-17"];
 
-function SearchForm() {
-  const [keyword, setKeyword] = useState("");
+function SearchForm({ initialKeyword = "", initialRating = "g" }) {
+  const [keyword, setKeyword] = useState(decodeURIComponent(initialKeyword));
   const [path, pushLocation] = useLocation();
-  const [rating, setRating] = useState(RATINGS[0]);
+  const [rating, setRating] = useState(initialRating);
 
   const handleSubmit = (event) => {
     // navegamos

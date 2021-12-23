@@ -14,7 +14,7 @@ const fromApiresponseToGofs = (apiresponse) => {
   return []
 }
 
-export default function getGifs({limit = 10, keyword = 'random', page = 0, rating} = {}) {
+export default function getGifs({limit = 10, keyword = 'random', page = 0, rating = 'g'} = {}) {
   const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=${rating}&lang=en`
 
   console.log('apiURL', apiURL)

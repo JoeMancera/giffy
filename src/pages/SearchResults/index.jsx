@@ -37,7 +37,7 @@ export default function SearchResult({ params }) {
         <title>{title} || Giffy</title>
         <meta name="description" content={title} />
       </Helmet>
-      <SearchForm />
+      <SearchForm initialKeyword={keyword} initialRating={rating} />
       <h2 className="App-gifs-title">{decodeURI(keyword)}</h2>
       <div className="App-gifs">
         {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
