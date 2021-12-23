@@ -5,6 +5,7 @@ import TrendingSearches from "components/TrendingSearches";
 import SearchForm from "components/SearchForm";
 import { useLocation } from "wouter";
 import { useGifs } from "hooks/useGifs";
+import { Helmet } from "react-helmet";
 import "./Home.css";
 
 export default function Home() {
@@ -23,6 +24,9 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Home | Giffy</title>
+      </Helmet>
       <SearchForm onSubmit={handleSubmit} />
       <h3>Última busqueda</h3>
       <div className="App-content ">

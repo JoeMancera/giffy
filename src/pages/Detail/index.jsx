@@ -4,7 +4,8 @@ import { Redirect } from "wouter";
 import Gif from "../../components/Gif";
 import useSingleGif from "hooks/useSingleGif";
 import Spinner from "components/Spinner";
-import useSEO from "hooks/useSEO";
+//import useSEO from "hooks/useSEO";
+import { Helmet } from "react-helmet";
 
 export default function GifInfo({ params }) {
   const { gif, isLoading, isError } = useSingleGif({ id: params.id });
@@ -14,11 +15,28 @@ export default function GifInfo({ params }) {
   */
 
   const title = gif ? gif.title : "";
-  useSEO({ description: `Gif from giphy called ${title}`, title });
+  //useSEO({ description: `Gif from giphy called ${title}`, title });
+
   console.log(isError);
-  if (isLoading) return <Spinner />;
+  if (isLoading) {
+    return (
+      <>
+        <Helmet>
+          <title>Cargando...</title>
+        </Helmet>
+        <Spinner />
+      </>
+    );
+  }
   if (isError) return <Redirect to="/404" />;
   if (!gif) return null;
 
-  return <Gif gifInfo={gif} />;
+  return (
+    <>
+      <Helmet>
+        <title>{title} || Gyffy</title>
+      </Helmet>
+      <Gif gifInfo={gif} />
+    </>
+  );
 }
