@@ -15,7 +15,7 @@ function App() {
       name: 'JoeMancera',
       working: false,
     }}>
-      <div className="App">
+      <>
         <section className="App">
           <h1>
             <Link to='/'>
@@ -26,9 +26,10 @@ function App() {
             <Route path='/' component={Home} />
             <Route path="/search/:keyword" component={SearchResults} />
             <Route path="/gif/:id" component={Detail} />
+            <Route path="/404" component={() => <h1>404 Error</h1>} />
           </GifsContextProvider>
         </section>
-      </div>
+      </>
     </StaticContext.Provider>
   )
 }

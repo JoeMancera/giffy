@@ -8,14 +8,16 @@ const fromApiresponseToGofs = (apiresponse) => {
       const {url} = images.downsized_medium
       return {url, title, id}
     })
+    console.log('servicio', gifs)
     return gifs
   }
   return []
 }
 
-export default function getGifs({limit = 10, keyword = 'morty', page = 0} = {}) {
+export default function getGifs({limit = 10, keyword = 'random', page = 0} = {}) {
   const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=g&lang=en`
 
+  console.log('apiURL', apiURL)
   return fetch(apiURL)
   .then(res => res.json())
   .then(fromApiresponseToGofs)
