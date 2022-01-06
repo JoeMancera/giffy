@@ -1,13 +1,67 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import { useLocation } from "wouter";
 import "./SearchForm.css";
 
 const RATINGS = ["g", "pg", "pg-13", "r", "nc-17"];
 
+const ACTIONS = {
+  UPDATE_KEYWORD: "update_keyword",
+  UPDATE_RATING: "update_rating",
+};
+
+// dos formas de hacer un reducer
+
+/*******funcional
+
+const ACTIONS_REDUCER = {
+  [ACTIONS.UPDATE_KEYWORD]: (state, action) => ({
+    ...state,
+    keyword: action.payload,
+    times: state.times + 1,
+  }),
+  [ACTIONS.UPDATE_RATING]: (state, action) => ({
+    ...state,
+    rating: action.payload,
+  })
+}
+
+const reducer = (state, action) => {
+  const actionReducer = ACTIONS_REDUCER[action.type];
+  return actionReducer ? actionReducer(state, action) : state;
+}
+
+*/
+
+//*** con el switch de toda la vida
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.UPDATE_KEYWORD:
+      return {
+        ...state,
+        keyword: action.payload,
+        times: state.times + 1,
+      };
+    case ACTIONS.UPDATE_RATING:
+      return {
+        ...state,
+        rating: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
 function SearchForm({ initialKeyword = "", initialRating = "g" }) {
-  const [keyword, setKeyword] = useState(decodeURIComponent(initialKeyword));
+  // const [rating, setRating] = useState(initialRating);
   const [path, pushLocation] = useLocation();
-  const [rating, setRating] = useState(initialRating);
+
+  const [state, dispach] = useReducer(reducer, {
+    keyword: decodeURIComponent(initialKeyword),
+    rating: initialRating,
+    times: 0,
+  });
+
+  const { keyword, rating, times } = state;
 
   const handleSubmit = (event) => {
     // navegamos
@@ -17,11 +71,11 @@ function SearchForm({ initialKeyword = "", initialRating = "g" }) {
   };
 
   const handleInput = (event) => {
-    setKeyword(event.target.value);
+    dispach({ type: ACTIONS.UPDATE_KEYWORD, payload: event.target.value });
   };
 
   const handleRating = (event) => {
-    setRating(event.target.value);
+    dispach({ type: ACTIONS.UPDATE_RATING, payload: event.target.value });
   };
 
   return (
@@ -42,6 +96,7 @@ function SearchForm({ initialKeyword = "", initialRating = "g" }) {
           </option>
         ))}
       </select>
+      {times}
     </form>
   );
 }
