@@ -3,7 +3,6 @@ import ListOfGifs from "components/ListOfGifs";
 import Spinner from "components/Spinner";
 import TrendingSearches from "components/TrendingSearches";
 import SearchForm from "components/SearchForm";
-import { useLocation } from "wouter";
 import { useGifs } from "hooks/useGifs";
 import { Helmet } from "react-helmet";
 import "./Home.css";
