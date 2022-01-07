@@ -4,6 +4,7 @@ import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import Home from './pages/Home'
 import StaticContext from './context/StaticContext'
+import ErrorPage from 'pages/ErrorPage';
 import { GifsContextProvider } from './context/GifsContext'
 import './App.css';
 import Logo from "assets/logo.svg";
@@ -26,7 +27,7 @@ function App() {
             <Route path='/' component={Home} />
             <Route path="/search/:keyword/:rating?" component={SearchResults} />
             <Route path="/gif/:id" component={Detail} />
-            <Route path="/404" component={() => <h1>404 Error</h1>} />
+            <Route path="/:rest*" component={ErrorPage} />
           </GifsContextProvider>
         </section>
       </>

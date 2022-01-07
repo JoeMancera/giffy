@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, findByRole } from '@testing-library/react';
 import App from '../App';
 // eslint-disable-next-line jest/no-mocks-import
 import '../__mocks__/intersectionObserverMock'
 
 test('Renders without crashing', async() => {
-  const {findByText} = render(<App />);
-  const text = await findByText(/Gifs/i);
+  const {findByRole} = render(<App />);
+  const text = await findByRole('img')
   expect(text).toBeInTheDocument();
 });
 

@@ -30,7 +30,6 @@ const reducer = (state, action) => {
 
 //*** con el switch de toda la vida
 const reducer = (state, action) => {
-  console.log("state", state);
   switch (action.type) {
     case ACTIONS.UPDATE_KEYWORD:
       return {
@@ -48,7 +47,7 @@ const reducer = (state, action) => {
   }
 };
 
-export default function useForm ({ initialKeyword, initialRating }) {
+export default function useForm ({ initialKeyword = '', initialRating = 'g' } = {}) {
   const [state, dispach] = useReducer(reducer, {
     keyword: decodeURIComponent(initialKeyword),
     rating: initialRating,
