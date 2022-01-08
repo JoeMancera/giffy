@@ -34,5 +34,7 @@
 - [Head a simple guid to HTML <head> elements](https://htmlhead.dev/)
 - [React rendering strategies by midudev](https://slides.com/midudev/react-rendering-strategies)
 - [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library)
+- [Formik - Form validation library for React](https://formik.org/)
+- [React-hook-form - Performant, flexible and extensible forms with easy-to-use validation. ](https://react-hook-form.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
