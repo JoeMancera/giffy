@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import SearchForm from "components/SearchForm";
+import Button from "components/Button";
 import { Helmet } from "react-helmet";
 import { Link } from "wouter";
 import { css } from "@emotion/react";
@@ -37,9 +38,6 @@ const GifErrorStyles = css({
   width: "250px",
   height: "250px",
   objectFit: "cover",
-  "&:hover": {
-    transform: "scale(1.2)",
-  },
 });
 
 export default function ErrorPage() {
@@ -64,9 +62,7 @@ export default function ErrorPage() {
             Sometimes gettings lost isn't that bad
           </span>
           <img css={GifErrorStyles} src={randomImage()} alt="alt-page-404" />
-          <Link href="/" className="btn">
-            Go to home
-          </Link>
+          <Button href="/">Go to home</Button>
         </div>
       </div>
     </>

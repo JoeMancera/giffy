@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "wouter";
+import Button from "components/Button";
 import useForm from "./useForm";
 import "./SearchForm.css";
 
@@ -30,7 +31,7 @@ function SearchForm({ initialKeyword = "", initialRating = "g" }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button>Buscar</button>
+      <Button>Buscar</Button>
       <input
         className="form-control"
         type="text"
