@@ -36,5 +36,7 @@
 - [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library)
 - [Formik - Form validation library for React](https://formik.org/)
 - [React-hook-form - Performant, flexible and extensible forms with easy-to-use validation. ](https://react-hook-form.com/)
+- [Emotion - CSS-in-JS ](https://emotion.sh/docs/introduction)
+- [Error pragmaFragment emotion solution](https://github.com/emotion-js/emotion/issues/2442#issuecomment-905091525)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
