@@ -38,5 +38,8 @@
 - [React-hook-form - Performant, flexible and extensible forms with easy-to-use validation. ](https://react-hook-form.com/)
 - [Emotion - CSS-in-JS ](https://emotion.sh/docs/introduction)
 - [Error pragmaFragment emotion solution](https://github.com/emotion-js/emotion/issues/2442#issuecomment-905091525)
+- [Bulma - CSS framework](https://bulma.io/)
+- [Semantic UI](https://semantic-ui.com/)
+- [Fluent UI by Microsoft](https://developer.microsoft.com/en-us/fluentui#/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
