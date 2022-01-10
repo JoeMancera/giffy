@@ -31,6 +31,7 @@ const msgErrorStyles = css({
   fontSize: "1.5rem",
   margin: "1rem 0",
 });
+
 const GifErrorStyles = css({
   margin: "1rem auto",
   width: "250px",
