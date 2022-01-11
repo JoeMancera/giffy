@@ -28,14 +28,16 @@ export default function Home() {
       </Helmet>
       <SearchForm />
       <h3>Última busqueda</h3>
-      <div className="App-content ">
-        <section className="App-gifs">
-          {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
-        </section>
-        <aside className="App-trends">
-          <h3 className="App-section">Tendencias</h3>
-          <TrendingSearches />
-        </aside>
+      <div className="App-wrapper">
+        <div className="App-main">
+          <section className="App-results">
+            {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
+          </section>
+          <aside className="App-trends">
+            <h3 className="App-section">Tendencias</h3>
+            <TrendingSearches />
+          </aside>
+        </div>
       </div>
     </>
   );

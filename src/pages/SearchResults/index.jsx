@@ -39,7 +39,7 @@ export default function SearchResult({ params }) {
       </Helmet>
       <SearchForm initialKeyword={keyword} initialRating={rating} />
       <h2 className="App-gifs-title">{decodeURI(keyword)}</h2>
-      <div className="App-gifs">
+      <div className="App-results">
         {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
         <div id="visor" ref={fromRef}></div>
       </div>

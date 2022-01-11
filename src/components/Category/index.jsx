@@ -5,7 +5,6 @@ import {
   CategoryListItem,
   CategoryLink,
 } from "./styles";
-import "./Category.css";
 
 const Category = ({ nameCategory, listOfItems }) => {
   return (

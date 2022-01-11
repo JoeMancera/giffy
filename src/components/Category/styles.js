@@ -20,7 +20,7 @@ export const CategoryTitle = styled.h3`
   margin-bottom: 0.7rem;
   margin-top: 0.6rem;
 
-  @media screen and (min-width: 55rem) {
+  ${bps.tablet} {
     text-align: right;
   }
 `
@@ -32,7 +32,7 @@ export const CategoryList = styled.ul`
   padding: 0;
   margin: 0;
 
-  ${bps.greaterThanMobile} {
+  ${bps.tablet} {
     justify-content: flex-end;
   }
 `
@@ -52,10 +52,11 @@ export const CategoryListItem = styled.li`
     text-decoration: underline;
   }
 
-  ${bps.greaterThanMobile} {
+  ${bps.tablet} {
     content: '';
     margin-right: 0.5em;
     font-size: 1em;
+
   }
 
 `

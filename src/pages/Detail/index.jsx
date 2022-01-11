@@ -17,7 +17,6 @@ export default function GifInfo({ params }) {
   const title = gif ? gif.title : "";
   //useSEO({ description: `Gif from giphy called ${title}`, title });
 
-  console.log(isError);
   if (isLoading) {
     return (
       <>

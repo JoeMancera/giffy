@@ -3,14 +3,18 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   align-items: center;
-  gap: 16px;
-  width: 60vw;
+  gap: 5px;
   grid-template-rows: masonry;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 425px) {
   .ListOfGifs {
-    width: 100vw;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 }
-  
+
+@media screen and (min-width: 768px) {
+  .ListOfGifs {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
