@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from "wouter";
+import { Route, Link, Switch } from "wouter";
 import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import Home from './pages/Home'
@@ -24,10 +24,12 @@ function App() {
             </Link>
           </h1>
           <GifsContextProvider>
-            <Route path='/' component={Home} />
-            <Route path="/search/:keyword/:rating?" component={SearchResults} />
-            <Route path="/gif/:id" component={Detail} />
-            <Route path="/:rest*" component={ErrorPage} />
+            <Switch>
+              <Route path='/' component={Home} />
+              <Route path="/search/:keyword/:rating?" component={SearchResults} />
+              <Route path="/gif/:id" component={Detail} />
+              <Route path="/:rest*" component={ErrorPage} />
+            </Switch>
           </GifsContextProvider>
         </section>
       </>

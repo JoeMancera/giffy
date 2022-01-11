@@ -1,4 +1,6 @@
 import styled from '@emotion/styled'
+import { Link } from "wouter";
+
 import { bps } from 'styles'
 
 const generateMultiColorCategory = props => {
@@ -40,8 +42,15 @@ export const CategoryListItem = styled.li`
 	padding: 0.3rem;
 	margin: 0.2rem;
 	font-size: 1.2rem;
+  cursor: pointer;
 
   ${generateMultiColorCategory}
+
+  &:hover {
+    background-color: var(--theme-body-txt);
+    color: var(--theme-body-bg);
+    text-decoration: underline;
+  }
 
   ${bps.greaterThanMobile} {
     content: '';
@@ -51,7 +60,7 @@ export const CategoryListItem = styled.li`
 
 `
 
-export const CategoryLink = styled.a`
+export const CategoryLink = styled(Link)`
   color: inherit;
   font-size: 1em;
   text-decoration: none;

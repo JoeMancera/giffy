@@ -1,6 +1,6 @@
 # 😎&nbsp;GIPHY Clone
 
-> Proyecto hecho con el [curso de REACT de MIDUDEV](https://www.youtube.com/watch?v=T_j60n1zgu0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC). 
+> Proyecto hecho con el [curso de REACT de MIDUDEV 💙 ](https://www.youtube.com/watch?v=T_j60n1zgu0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC). 
 
 # 🕹&nbsp;Tecnologias
 
