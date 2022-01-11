@@ -1,14 +1,11 @@
 .Gif {
-  border-radius: 6px;
   color: #ccc;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   border-radius: 12px;
-  max-width: 300px;
-  height: fit-content;
-  -webkit-box-shadow: 0px 0px 10px -2px #ccc; 
-  box-shadow: 0px 0px 10px -2px #ccc;
+  width: 100%;
+  max-height: 280px;
 }
 
 .Gif figcaption{
@@ -17,10 +14,22 @@
   font-size: 8px;
   position: absolute;
   background: rgba(0, 0, 0, 0.849);
-  border-radius: 12px 0 0 0 ;
-}
-.Gif img {
-  object-fit: contain;
-  border-radius: 12px;
 }
 
+.Gif img {
+  object-fit: cover;
+  image-rendering: auto;
+  max-height: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  .Gif {
+    max-height: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Gif {
+    max-height: 250px;
+  }
+}

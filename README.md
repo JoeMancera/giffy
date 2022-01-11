@@ -1,6 +1,6 @@
 # 😎&nbsp;GIPHY Clone
 
-> Proyecto hecho con el [curso de REACT de MIDUDEV](https://www.youtube.com/watch?v=T_j60n1zgu0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC). 
+> Proyecto hecho con el [curso de REACT de MIDUDEV 💙 ](https://www.youtube.com/watch?v=T_j60n1zgu0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC). 
 
 # 🕹&nbsp;Tecnologias
 
@@ -30,8 +30,16 @@
 - [Firing events | Testing library](https://testing-library.com/docs/dom-testing-library/api-events)
 - [useCallback | React](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [React.memo  | A higher-order component](https://reactjs.org/docs/react-api.html#reactmemo)
-- [Wouter | <Redirect />](https://github.com/molefrog/wouter#redirect-topath-)
+- [Wouter | Redirect ](https://github.com/molefrog/wouter#redirect-topath-)
 - [Head a simple guid to HTML <head> elements](https://htmlhead.dev/)
 - [React rendering strategies by midudev](https://slides.com/midudev/react-rendering-strategies)
+- [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library)
+- [Formik - Form validation library for React](https://formik.org/)
+- [React-hook-form - Performant, flexible and extensible forms with easy-to-use validation. ](https://react-hook-form.com/)
+- [Emotion - CSS-in-JS ](https://emotion.sh/docs/introduction)
+- [Error pragmaFragment emotion solution](https://github.com/emotion-js/emotion/issues/2442#issuecomment-905091525)
+- [Bulma - CSS framework](https://bulma.io/)
+- [Semantic UI](https://semantic-ui.com/)
+- [Fluent UI by Microsoft](https://developer.microsoft.com/en-us/fluentui#/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

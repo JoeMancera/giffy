@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import ListOfGifs from "components/ListOfGifs";
 import Spinner from "components/Spinner";
+import SearchForm from "components/SearchForm";
 import { useGifs } from "hooks/useGifs";
 import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
@@ -9,8 +10,8 @@ import "./SearchResult.css";
 import { Helmet } from "react-helmet";
 
 export default function SearchResult({ params }) {
-  const { keyword } = params;
-  const { loading, gifs, setPage } = useGifs({ keyword });
+  const { keyword, rating = "g" } = params;
+  const { loading, gifs, setPage } = useGifs({ keyword, rating });
   const { isNearScreen, fromRef } = useNearScreen({ once: false });
 
   const title = gifs ? `${gifs.length} resultados de ${keyword}` : "";
@@ -36,8 +37,9 @@ export default function SearchResult({ params }) {
         <title>{title} || Giffy</title>
         <meta name="description" content={title} />
       </Helmet>
+      <SearchForm initialKeyword={keyword} initialRating={rating} />
       <h2 className="App-gifs-title">{decodeURI(keyword)}</h2>
-      <div className="App-gifs">
+      <div className="App-results">
         {loading ? <Spinner /> : <ListOfGifs gifs={gifs} />}
         <div id="visor" ref={fromRef}></div>
       </div>

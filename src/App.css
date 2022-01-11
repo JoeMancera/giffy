@@ -16,3 +16,70 @@ a:hover a{
   font-size: 18px;
   color: white;
 }
+
+.btn {
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  background-color: var(--brand-color_3);
+  color: var(--theme-body-txt);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--brand-color_6);
+}
+
+.App-wrapper {
+  width: 100%;
+	max-width: 90rem;
+	margin: 0 auto;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.App-results {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.App-title {
+  text-align: center;
+  font-size: 0.5em;
+  margin: 0;
+  align-self: start;
+}
+
+.App-section {
+  margin: 0;
+  font-size: 18px;
+}
+
+.App-trends {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .App-main {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .App-trends {
+    max-width: 300px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12px;
+  }
+
+  .App-section {
+    font-size: 2rem;
+    text-align: right;
+  }
+}

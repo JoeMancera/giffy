@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route, Link } from "wouter";
+import { Route, Link, Switch } from "wouter";
 import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import Home from './pages/Home'
 import StaticContext from './context/StaticContext'
+import ErrorPage from 'pages/ErrorPage';
 import { GifsContextProvider } from './context/GifsContext'
 import './App.css';
 import Logo from "assets/logo.svg";
@@ -23,10 +24,12 @@ function App() {
             </Link>
           </h1>
           <GifsContextProvider>
-            <Route path='/' component={Home} />
-            <Route path="/search/:keyword" component={SearchResults} />
-            <Route path="/gif/:id" component={Detail} />
-            <Route path="/404" component={() => <h1>404 Error</h1>} />
+            <Switch>
+              <Route path='/' component={Home} />
+              <Route path="/search/:keyword/:rating?" component={SearchResults} />
+              <Route path="/gif/:id" component={Detail} />
+              <Route path="/:rest*" component={ErrorPage} />
+            </Switch>
           </GifsContextProvider>
         </section>
       </>
