@@ -14,7 +14,9 @@ export default function SearchResult({ params }) {
   const { loading, gifs, setPage } = useGifs({ keyword, rating });
   const { isNearScreen, fromRef } = useNearScreen({ once: false });
 
-  const title = gifs ? `${gifs.length} resultados de ${keyword}` : "";
+  const title = gifs
+    ? `${gifs.length} resultados de ${decodeURI(keyword)}`
+    : "";
   //useSEO({ title });
   // const handleOnNextPage = () => {
   //   setPage((prevPage) => prevPage + 1);
@@ -23,7 +25,7 @@ export default function SearchResult({ params }) {
   //const handleOnNextPage = () => console.log("next page");
   // El useCallback espera una función por lo que no hace falta hacer una arrow function, ya que el debounce devuelve una
   const debounceHandleNextPage = useCallback(
-    debounce(() => setPage((prevPage) => prevPage + 1), 500),
+    debounce(() => setPage((prevPage) => prevPage + 1), 100),
     [setPage]
   );
 
